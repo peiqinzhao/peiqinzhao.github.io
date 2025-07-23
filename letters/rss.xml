@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Hedera Thoughts</title>
+    <link>https://peiqinzhao.github.io/letters</link>
+    <description>Updates from my personal blog</description>
+    <item>
+      <title>2025_06_30</title>
+      <link>https://peiqinzhao.github.io/letters/2025_06_30.html</link>
+      <pubDate>Friday, 30 Jun 2025 10:00:00 GMT</pubDate>
+    </item>
+    <!-- Repeat <item> for each post -->
+  </channel>
+</rss>
