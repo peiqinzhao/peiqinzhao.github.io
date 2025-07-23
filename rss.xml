@@ -6,28 +6,28 @@
     <link>https://peiqinzhao.github.io</link>
     <description>Updates from my personal blog</description>
     <item>
-      <title>2025_06_30</title>
+      <title>Test3</title>
       <link>https://peiqinzhao.github.io/letters/2025_06_30.html</link>
-      <guid>https://peiqinzhao.github.io/letters/2025_06_30.html</guid>
-      <pubDate>Mon, 30 Jun 2025 10:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>https://peiqinzhao.github.io/letters/2025_06_30.html</link>
-      <guid>https://peiqinzhao.github.io/letters/2025_06_31.html</guid>
-      <pubDate>Tue, 22 Jul 2025 10:00:00 PDT</pubDate>
+      <guid>https://peiqinzhao.github.io/letters/2025_06_33.html</guid>
+      <pubDate>Tue, 22 Jul 2025 21:00:00 PDT</pubDate>
     </item>
     <item>
       <title>Test2</title>
       <link>https://peiqinzhao.github.io/letters/2025_06_30.html</link>
       <guid>https://peiqinzhao.github.io/letters/2025_06_32.html</guid>
-      <pubDate>Tue, 22 Jul 2025 10:00:00 PDT</pubDate>
+      <pubDate>Tue, 22 Jul 2025 20:00:00 PDT</pubDate>
     </item>
     <item>
-      <title>Test3</title>
+      <title>Test</title>
       <link>https://peiqinzhao.github.io/letters/2025_06_30.html</link>
-      <guid>https://peiqinzhao.github.io/letters/2025_06_33.html</guid>
-      <pubDate>Tue, 22 Jul 2025 10:00:00 PDT</pubDate>
+      <guid>https://peiqinzhao.github.io/letters/2025_06_31.html</guid>
+      <pubDate>Tue, 22 Jul 2025 19:00:00 PDT</pubDate>
+    </item>
+    <item>
+      <title>2025_06_30</title>
+      <link>https://peiqinzhao.github.io/letters/2025_06_30.html</link>
+      <guid>https://peiqinzhao.github.io/letters/2025_06_30.html</guid>
+      <pubDate>Mon, 30 Jun 2025 10:00:00 GMT</pubDate>
     </item>
     <!-- Repeat <item> for each post -->
   </channel>
