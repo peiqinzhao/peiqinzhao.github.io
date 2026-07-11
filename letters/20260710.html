@@ -1,0 +1,154 @@
+<!-- 手写的。发现 bug 请当作手工制品的证明。 -->
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>又一点所思</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='25' font-size='24' fill='%232E5339'>&#10087;</text></svg>">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XB7ZB6KSK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5XB7ZB6KSK');
+</script>
+<script>(function(){try{var t=localStorage.getItem('lamp');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style>
+  :root{
+    --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A;
+    --serif:"Times New Roman","Songti SC","Noto Serif SC",serif;
+    --mono:"Courier New",Courier,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+      --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+      --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
+  }
+  :root[data-theme="light"]{ --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A; }
+  :root[data-theme="dark"]{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+    --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+    --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{ margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--serif); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; }
+  ::selection{background:var(--sel-bg);color:var(--sel-fg)}
+  main{max-width:46rem; margin:0 auto; padding:0 22px 0}
+  a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px}
+  a:visited{color:var(--visited)}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .hedera{color:var(--accent); font-style:normal}
+  hr{border:0;border-top:1px solid var(--hairline);margin:0}
+
+  header{padding:26px 0 0}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:16px}
+  .home{font-family:var(--serif);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    font-size:clamp(15px,3.4vw,18px);text-decoration:none;color:var(--ink)}
+  .home:visited{color:var(--ink)}
+  .home:hover{text-decoration:underline}
+  .lamp{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:none;border:0;
+    color:var(--link);cursor:pointer;text-decoration:underline;text-underline-offset:2px;padding:2px 0;white-space:nowrap}
+  .lamp:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-soft);margin:22px 0 8px}
+  .eyebrow b{color:var(--accent);font-weight:400}
+  h1.title{font-family:var(--serif);font-weight:700;font-size:clamp(21px,4.6vw,27px);
+    letter-spacing:.01em;line-height:1.25;margin:0 0 22px}
+
+  pre.body{
+    font-family:var(--mono); font-variant-numeric:tabular-nums;
+    font-size:clamp(12.5px,2.65vw,14.5px); line-height:1.62;
+    white-space:pre-wrap; overflow-wrap:normal; word-break:keep-all;
+    color:var(--ink); margin:8px 0 0; tab-size:8;
+  }
+  pre.body b{font-weight:700}
+  pre.body a{color:var(--link)}
+
+  .prose{font-size:17px;line-height:1.85}
+  .prose p{margin:0 0 18px}
+  .prose p:first-child{margin-top:8px}
+  .prose blockquote{margin:22px 0;padding:6px 0 6px 18px;border-left:2px solid var(--accent);color:var(--ink)}
+
+  nav.pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:12.5px;border-top:1px solid var(--hairline);
+    margin-top:34px;padding:16px 0}
+  nav.pn a{white-space:nowrap}
+  nav.pn .mid{color:var(--ink-soft)}
+  nav.pn .spacer{color:var(--ink-soft);opacity:.5}
+
+  /* letters index */
+  .tw{overflow-x:auto}
+  table.letters{border-collapse:collapse;width:100%;margin:6px 0 0}
+  table.letters caption{text-align:left;color:var(--ink-soft);font-size:14px;margin-bottom:14px;line-height:1.6}
+  table.letters td{padding:12px 10px 12px 0;border-top:1px solid var(--hairline);vertical-align:top}
+  table.letters tr:last-child td{border-bottom:1px solid var(--hairline)}
+  table.letters .yr{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-soft)}
+  table.letters .ti a{font-family:var(--mono);font-size:14px}
+  table.letters .su{color:var(--ink-soft);font-size:14.5px;line-height:1.6}
+  .fn{color:var(--ink-soft);font-size:13px;font-family:var(--mono);margin:14px 0 0;line-height:1.7}
+
+  footer{border-top:1px solid var(--hairline);margin-top:8px;padding:22px 0 40px}
+  footer p{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);line-height:1.9;margin:0}
+  footer .credit{color:var(--ink);font-size:12.5px;margin:0 0 8px}
+  footer a{color:var(--ink-soft)}
+  .printonly{display:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+  @media print{
+    :root{--ground:#fff;--ink:#000;--ink-soft:#333;--hairline:#bbb}
+    .lamp,nav.pn{display:none}
+    .printonly{display:block;font-family:var(--mono);font-size:11px;color:#555;margin:0 0 14px}
+    a{color:#000}
+    pre.body a[href]::after{content:" ("attr(href)")";font-size:10px;color:#555}
+    body{font-size:12pt}
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="printonly">你好，纸上的读者。这封信终于回到了它该在的介质。</p>
+  <header>
+    <div class="top">
+      <a class="home" href="../index.html">Hedera Thoughts <span class="hedera" title="hedera (n.): the oldest ornament in typography. Also, me.">&#10087;</span></a>
+      <button class="lamp" id="lamp" type="button" aria-label="切换明暗">关灯 / lamp</button>
+    </div>
+    <hr>
+    <p class="eyebrow">随笔 · <b>ESSAY</b></p>
+    <h1 class="title">又一点所思<br><span style="font-family:var(--mono);font-size:.6em;font-weight:400;letter-spacing:.04em;color:var(--ink-soft)">2017.01.27 - 2026.07.10 · 随笔</span></h1>
+  </header>
+  <section class="prose">
+    <p>一晃眼又是十年, 时间真快啊.  昨天还看到一种理论, 说如果是基于每个人已活过岁月的比例来看, 其实三十岁就相当于人生的50%了. 汉语里有一句 叫做三十而立, 西方也曾有人提出奥德赛20岁后长达十年的漂泊正是一段充满迷茫与试错的旷野岁月. 仿佛在不同文化里30岁就像一个分水岭, 标志着一个人在成人礼后磨磨蹭蹭了好久突然一下子迈入成年人的门槛.  就像老友记里那句话, “Welcome to the real world. It sucks. You're gonna love it!”  而此时此刻的我, 似乎还处于既未立, 尚且惑的状态.</p>
+    <p>直到今晚才突然有点心情整理一下这段时间自己的想法和思考. 不知道从去年什么时候开始, 时不时就在跟自己对话 “你是一个怎样的一个人”.  或者说 “你究竟想要什么”. Claude Fable 5 公测之后我做的第一件事就是让他读取了我十几万行的微信聊天记录,  然后第一句问ta的问题就是,  “你觉得我是怎样的一个人.”  仔细读他的回答, 就觉得挺有意思的, 现在AI可能都比你要了解自己.  可是后来也发现, AI能对前个问题给你一个满意的回答,  却没法回答好后者. 其实我现在想要的也很简单, 我想给这个世界留点什么, 这点东西不用多, 一点东西足已让我年迈之后跟自己孩子说, 啊你爸当年其实也做了一点很有意义的事情.  就像前几天还在社交媒体上看到一段对山西应县木塔的维护木工老赵的采访, 他一辈子都在维护一座木塔, 甚至借了四十万去制作一个微缩木塔, 妻子不理解, 家人也怪他将负债传给后人. 记者问他这辈子究竟想干什么, 他说 “建一座新的木塔, 这就是我一辈子最大的心愿, 我老赵, 做一件有意义的事情”  是啊,  人这辈子其实也是在不断寻找自身的意义, 而在寻找的过程中看到无数的美和丑, 善与恶, 最终慢慢形成自己的本我.</p>
+    <p>前段时间某一天还突然就回想起高中时背诵的王国维三重境界,  “昨夜西风凋碧树, 独上高楼, 望尽天涯路.”  “衣带渐宽终不悔，为伊消得人憔悴” “众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。”  那时其实什么都不理解, 只觉得众里寻她千百度, 似乎指的就是对爱情的寻觅,  甚至会困惑为什么堂堂辛弃疾会写一首爱情词. 可现在回头想起, 又突然理解回首即在灯火阑珊处那种心情. 那个她其实不需要是爱人, 甚至都不需要是看得见摸得着的东西, 其实简简单单可以是每个人一辈子苦苦追寻的东西或者意义.  当一个人为一件问题探索很久很久,  为之憔悴, 为之呕心沥血, 可就有一天在不经意间突然找到了答案, 那种情绪其实是一种很复杂的情绪, 喜悦, 释然, 不甘, 种种.</p>
+    <p>从去年到现在, 其实发生了很多事情, 回想起来像做梦, 似乎放在大多数同龄人身上一句 大起大落 都不为过, 有时候觉得再给我一次机会, 我可能不想再经历这些. 但有时又觉得似乎就是上天赠与我的经历, 一种只有老了假装随意几句跟自己孩子说起的谈资. 几年前我还经常跟父亲顶嘴, 觉得说他那些所谓人生道理都不过而已, 我就不信命, 哪怕知道是坑, 我也要试试. 但经历了今年这些种种, 曾经的少年锐意也渐渐被磨平, 剩下的东西好听点可以叫从容, 难听一些姑且称之为认命.</p>
+    <p>最后想说说AI.</p>
+    <p>去年进入这个行业看到最frontier的发展之后, 才逐渐意识到此时此刻我们就像乘坐一辆高速列车, 却时刻随时可能面临文明十字路口向左向右的问题. 前几天还在跟同事在讨论AI对于人类的教育来说究竟是好事还是坏事, 我说最大的问题就是现在的年轻人以后可能会越来越蠢, 他相反描绘出一副乌托邦(中性表达)的情景, 人类的创造力会完全释放出来, 而大家不需要工作之后都会去跟自己的家人或者朋友度过.  我觉得我可能还是对人性缺乏了一些信心. 最后在场每个人说, post AGI之后大家都会去干嘛, 我说如果医学没有机器人解决的话,我想去读个MD, 如果解决了我就去租个farm, 当个农民.</p>
+    <p>写到这里好像又没什么想说了, 月底会去日本看看, 下个月会去伦敦参加好朋友的婚礼.  趁着现在单身, 四处走走, 看看不同国度不同文化下大家都是怎样子的生活.</p>
+    <p>哦说到好朋友, 当时跟其说起我经历的这些, 我就说, 我很庆幸早几年的时候两人一起跑去了Maui和Honolulu, 那种旅途上说天说地, 租廉价浮潜装备下水看到鱼在眼里成群有过的兴奋感, 恐怕也很难再有了.  如今再经历这些, 有些事情一辈子就一次, 不做可能老了才会觉得后悔.</p>
+    <p>好了就写到这里吧.</p>
+    <p>2026 07 10 11:15PM</p>
+  </section>
+  <nav class="pn"><span class="spacer">←</span><a class="mid" href="letters.html">全部信件</a><span class="spacer">→</span></nav>
+  <footer>
+    <p class="credit">这个网站除了文章正文，文案和代码都是 Fable 5 写的。</p>
+    <p>© 2023– Hedera&#160;·&#160;<a href="../disclaimer.html">Legal Disclaimer</a>&#160;·&#160;Made in the Bay Area <span class="hedera" title="hedera (n.): the oldest ornament in typography. Also, me.">&#10087;</span></p>
+  </footer>
+</main>
+<script>
+  (function(){var root=document.documentElement,btn=document.getElementById('lamp');
+   function cur(){var a=root.getAttribute('data-theme');return a?a:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+   btn.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);
+     try{localStorage.setItem('lamp',n);}catch(e){}btn.textContent=n==='dark'?'开灯 / lamp':'关灯 / lamp';});
+   if(cur()==='dark')btn.textContent='开灯 / lamp';})();
+  console.log('%c❧ 看 source？宜。本站手写，欢迎来拆。忌：找 webfont，没有。','color:#2E5339;font-family:Courier,monospace');
+</script>
+</body>
+</html>
