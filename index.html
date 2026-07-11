@@ -1,44 +1,165 @@
+<!-- 手写的。发现 bug 请当作手工制品的证明。 -->
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEDERA THOUGHTS</title>
+<meta name="description" content="Hedera：广东人，在湾区写代码。外面好商量，里头挺轴。有话就写信，一年一两封。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='25' font-size='24' fill='%232E5339'>&#10087;</text></svg>">
 
-<html><head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XB7ZB6KSK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-5XB7ZB6KSK');
 </script>
-<title>HEDERA THOUGHTS</title>
-<meta name="GENERATOR" content="MSHTML 8.00.6001.18828"></head>
-<body link="#800080" bgcolor="#ffffff" text="#000080" vlink="#ff0000"><b><font size="6">
-</font></b><p align="center"><b><font size="6">H</font><font size="4">EDERA </font><font size="6">T</font><font size="4">HOUGHTS </font><font size="2"></b><font size="1">&nbsp;</font></p>
-<hr>
 
-<p align="center">
-</p><center>
-<table border="0" cellspacing="0" width="90%">
-  <tbody>
-  <tr>
-    <td height="55" valign="top" width="50%">
-      <ul>
-        <li><a href="./about_me.html">About Me</a> 
-    </li></ul></td>
-    <td height="55" valign="top" width="50%">
-      <ul>
-        <li><a href="./letters/letters.html">Thoughts</a> <br><font size="1">Updated Jun 29, 2025<br></font>
-          </li></ul></td></tr>
-    
+<!-- 防闪白 -->
+<script>(function(){try{var t=localStorage.getItem('lamp');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 
-</tbody></table>
-</center>
-<p></p><hr>
+<style>
+  :root{
+    --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A;
+    --serif:"Times New Roman","Songti SC","Noto Serif SC",serif;
+    --mono:"Courier New",Courier,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+      --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+      --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
+  }
+  :root[data-theme="light"]{ --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A; }
+  :root[data-theme="dark"]{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+    --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+    --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
 
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{ margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--serif); font-size:17px; line-height:1.7;
+    -webkit-font-smoothing:antialiased; }
+  ::selection{background:var(--sel-bg);color:var(--sel-fg)}
+  main{max-width:34rem; margin:0 auto; padding:0 22px}
+  a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px}
+  a:visited{color:var(--visited)}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .hedera{color:var(--accent); font-style:normal; cursor:help}
+  hr{border:0;border-top:1px solid var(--hairline);margin:0}
 
-<dl><p></p><p align="left"><font size="2"><a href="./disclaimer.html">Legal Disclaimer</a> 
-</font></p><p align="left"><font size="2">Copyright © 2024-2025<b> Hedera Thoughts</b></font><font size="2"> 
-</font></p></dl><font size="2">
+  header{padding:34px 0 18px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .wordmark{font-size:clamp(22px,5vw,28px);letter-spacing:.07em;font-weight:700;
+    text-transform:uppercase;line-height:1.2;margin:0}
+  .lamp{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:none;border:0;
+    color:var(--link);cursor:pointer;text-decoration:underline;text-underline-offset:2px;padding:2px 0;white-space:nowrap}
+  .lamp:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .sub{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);margin:12px 0 0}
 
-<img src="animation.png" alt="Girl in a jacket" style="width:512px;height:512px;">
-<p><a name="ANNUAL"></a><a name="INTERIM"></a><a name="WEBLETTER"></a><a name="ACTIVEWEAR"></a><a name="ANNMTG"></a></p></font>
-</body></html>
+  section{padding:26px 0}
+  .intro p{margin:0 0 16px}
+  .intro p:last-child{margin-bottom:0}
+
+  h2{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:400;margin:0 0 16px}
+  .lead{color:var(--ink-soft);font-size:15px;margin:0 0 16px}
+
+  .tw{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;margin:0}
+  .letters td{padding:12px 12px 12px 0;border-top:1px solid var(--hairline);vertical-align:top}
+  .letters tr:last-child td{border-bottom:1px solid var(--hairline)}
+  .letters .yr{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-soft);font-size:14px}
+  .letters .ti a{font-family:var(--mono);font-size:14px}
+  .letters .su{color:var(--ink-soft);font-size:14.5px;line-height:1.6}
+
+  footer{border-top:1px solid var(--hairline);margin-top:8px;padding:22px 0 44px}
+  footer p{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);line-height:1.9;margin:0}
+  footer .credit{color:var(--ink);font-size:12.5px;margin:0 0 8px}
+  footer a{color:var(--ink-soft)}
+  .printonly{display:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+  @media print{
+    :root{--ground:#fff;--ink:#000;--ink-soft:#333;--hairline:#bbb}
+    .lamp{display:none}
+    .printonly{display:block;font-family:var(--mono);font-size:11px;color:#555;margin:0 0 14px}
+    a{color:#000}
+    .letters .ti a[href]::after{content:" ("attr(href)")";font-size:10px;color:#555}
+    body{font-size:12pt}
+  }
+</style>
+</head>
+
+<body>
+<main>
+
+  <p class="printonly">你好，纸上的读者。</p>
+
+  <header>
+    <div class="top">
+      <h1 class="wordmark">Hedera Thoughts <span class="hedera" tabindex="0" role="img"
+        aria-label="hedera：拉丁语的常春藤，也是排版里最老的装饰符号"
+        title="hedera：拉丁语的常春藤，也是排版里最老的装饰符号 ❧">&#10087;</span></h1>
+      <button class="lamp" id="lamp" type="button" aria-label="切换明暗">关灯 / lamp</button>
+    </div>
+    <p class="sub">hederathoughts.com&#160;·&#160;自 2023 年起</p>
+  </header>
+  <hr>
+
+  <section class="intro">
+    <p>我是 Hedera，广东人，在湾区写代码。</p>
+    <p>好说的部分很简单：白天写代码，晚上闲不下来——看点投资、做点小工具、泡茶。广东人的胃改不掉，对朋友够意思这点也改不掉。</p>
+    <p>要真说「我是谁」，大概是这样：常春藤（Hedera 就是这个意思）看着软，其实认死理，认定的方向很难改。我差不多就这样，外面好商量，里头挺轴。</p>
+    <p>我不太会当面讲这些，写字反而自在。所以有话就写信——一年一两封，写投资，也写瞎想，写错的判断留着不删，方便以后打脸。</p>
+    <p>信在下面。慢慢看，不急。</p>
+  </section>
+  <hr>
+
+  <section>
+    <h2>信件 · The Letters</h2>
+    <p class="lead">学着巴菲特写给股东的样子写，虽然我没有股东。一年一两封。</p>
+    <div class="tw">
+    <table class="letters">
+      <tbody>
+        <tr>
+          <td class="yr">2023</td>
+          <td class="ti"><a href="./letters/2023.html">Hederal Thoughts — 2023</a></td>
+          <td class="su">入市第五年的回望，聊了聊贸易战、加息这些宏观。</td>
+        </tr>
+        <tr>
+          <td class="yr">2024&#8202;(上)</td>
+          <td class="ti"><a href="./letters/2024_06_30.html">2024, first half</a></td>
+          <td class="su">利率预期反复横跳的半年，年中先记一笔。</td>
+        </tr>
+        <tr>
+          <td class="yr">2025&#8202;(上)</td>
+          <td class="ti"><a href="./letters/2025_06_30.html">2025, first half</a></td>
+          <td class="su">从「别亏钱」讲起，附上这些年的真实业绩。</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <footer>
+    <p class="credit">这个网站除了信的正文，文案和代码都是 Fable 5 写的。</p>
+    <p>© 2023– Hedera&#160;·&#160;<a href="./disclaimer.html">Legal Disclaimer</a>&#160;·&#160;Made in the Bay Area <span class="hedera" title="hedera：常春藤 ❧">&#10087;</span></p>
+  </footer>
+
+</main>
+
+<script>
+  (function(){var root=document.documentElement,btn=document.getElementById('lamp');
+   function cur(){var a=root.getAttribute('data-theme');return a?a:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+   btn.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);
+     try{localStorage.setItem('lamp',n);}catch(e){}btn.textContent=n==='dark'?'开灯 / lamp':'关灯 / lamp';});
+   if(cur()==='dark')btn.textContent='开灯 / lamp';})();
+</script>
+</body>
+</html>
