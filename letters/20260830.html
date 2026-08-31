@@ -1,0 +1,151 @@
+<!-- 手写的。发现 bug 请当作手工制品的证明。 -->
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>给阿仔的信 2026</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='25' font-size='24' fill='%232E5339'>&#10087;</text></svg>">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XB7ZB6KSK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5XB7ZB6KSK');
+</script>
+<script>(function(){try{var t=localStorage.getItem('lamp');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style>
+  :root{
+    --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A;
+    --serif:"Times New Roman","Songti SC","Noto Serif SC",serif;
+    --mono:"Courier New",Courier,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+      --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+      --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
+  }
+  :root[data-theme="light"]{ --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A; }
+  :root[data-theme="dark"]{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+    --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+    --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{ margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--serif); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; }
+  ::selection{background:var(--sel-bg);color:var(--sel-fg)}
+  main{max-width:46rem; margin:0 auto; padding:0 22px 0}
+  a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px}
+  a:visited{color:var(--visited)}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .hedera{color:var(--accent); font-style:normal}
+  hr{border:0;border-top:1px solid var(--hairline);margin:0}
+
+  header{padding:26px 0 0}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:16px}
+  .home{font-family:var(--serif);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    font-size:clamp(15px,3.4vw,18px);text-decoration:none;color:var(--ink)}
+  .home:visited{color:var(--ink)}
+  .home:hover{text-decoration:underline}
+  .lamp{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:none;border:0;
+    color:var(--link);cursor:pointer;text-decoration:underline;text-underline-offset:2px;padding:2px 0;white-space:nowrap}
+  .lamp:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-soft);margin:22px 0 8px}
+  .eyebrow b{color:var(--accent);font-weight:400}
+  h1.title{font-family:var(--serif);font-weight:700;font-size:clamp(21px,4.6vw,27px);
+    letter-spacing:.01em;line-height:1.25;margin:0 0 22px}
+
+  pre.body{
+    font-family:var(--mono); font-variant-numeric:tabular-nums;
+    font-size:clamp(12.5px,2.65vw,14.5px); line-height:1.62;
+    white-space:pre-wrap; overflow-wrap:normal; word-break:keep-all;
+    color:var(--ink); margin:8px 0 0; tab-size:8;
+  }
+  pre.body b{font-weight:700}
+  pre.body a{color:var(--link)}
+
+  .prose{font-size:17px;line-height:1.85}
+  .prose p{margin:0 0 18px}
+  .prose p:first-child{margin-top:8px}
+  .prose blockquote{margin:22px 0;padding:6px 0 6px 18px;border-left:2px solid var(--accent);color:var(--ink)}
+
+  nav.pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:12.5px;border-top:1px solid var(--hairline);
+    margin-top:34px;padding:16px 0}
+  nav.pn a{white-space:nowrap}
+  nav.pn .mid{color:var(--ink-soft)}
+  nav.pn .spacer{color:var(--ink-soft);opacity:.5}
+
+  /* letters index */
+  .tw{overflow-x:auto}
+  table.letters{border-collapse:collapse;width:100%;margin:6px 0 0}
+  table.letters caption{text-align:left;color:var(--ink-soft);font-size:14px;margin-bottom:14px;line-height:1.6}
+  table.letters td{padding:12px 10px 12px 0;border-top:1px solid var(--hairline);vertical-align:top}
+  table.letters tr:last-child td{border-bottom:1px solid var(--hairline)}
+  table.letters .yr{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-soft)}
+  table.letters .ti a{font-family:var(--mono);font-size:14px}
+  table.letters .su{color:var(--ink-soft);font-size:14.5px;line-height:1.6}
+  .fn{color:var(--ink-soft);font-size:13px;font-family:var(--mono);margin:14px 0 0;line-height:1.7}
+
+  footer{border-top:1px solid var(--hairline);margin-top:8px;padding:22px 0 40px}
+  footer p{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);line-height:1.9;margin:0}
+  footer .credit{color:var(--ink);font-size:12.5px;margin:0 0 8px}
+  footer a{color:var(--ink-soft)}
+  .printonly{display:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+  @media print{
+    :root{--ground:#fff;--ink:#000;--ink-soft:#333;--hairline:#bbb}
+    .lamp,nav.pn{display:none}
+    .printonly{display:block;font-family:var(--mono);font-size:11px;color:#555;margin:0 0 14px}
+    a{color:#000}
+    pre.body a[href]::after{content:" ("attr(href)")";font-size:10px;color:#555}
+    body{font-size:12pt}
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="printonly">你好，纸上的读者。这封信终于回到了它该在的介质。</p>
+  <header>
+    <div class="top">
+      <a class="home" href="../index.html">Hedera Thoughts <span class="hedera" title="hedera (n.): the oldest ornament in typography. Also, me.">&#10087;</span></a>
+      <button class="lamp" id="lamp" type="button" aria-label="切换明暗">关灯 / lamp</button>
+    </div>
+    <hr>
+    <p class="eyebrow">给阿仔 · <b>A LETTER TO MY FUTURE KID</b></p>
+    <h1 class="title">给阿仔的信 2026<br><span style="font-family:var(--mono);font-size:.6em;font-weight:400;letter-spacing:.04em;color:var(--ink-soft)">August 30, 2026</span></h1>
+  </header>
+  <section class="prose">
+    <p>Hey 阿仔。</p>
+    <p>其实我自己都还没想好给你取什么名呢， 甚至你什么时候会来到这个世界我都未曾有任何估量 （老爹不得不给你说声道歉，让你比同龄人都要晚来到世界，我连你妈甚至可能都还没有认识呢）。 可是经历了一些，以及看身边人的经历， 突然就想着给未来的你写一些东西，但我现在其实也没组织好第一封信里究竟应该跟你说些什么，因此可能一开始就想到什么就说什么。想必等你能看懂这封信的时候， Claude都估计Fable 20了，若你看到的时候嫌啰嗦想左上角直接退出网页的话，你就对他吼一句 “Explain this letter in plain English and summarize the context for me”估计就能解决很多事了。</p>
+    <p>想必等你成长的过程中，会有无数人问你长大之后想做什么，告诉你做人应该怎么样， 或者如果从事职业X的话应该怎么样，而有一天可能你也会问我我对你有什么期待。爸爸的很多朋友都觉得我会对你很严格，会把自己的教育想法在你身上实践，会希望你能成为一个很自律的人。但其实我从未这么想过， 原因倒也不是因为我推崇快乐教育，而是因为我希望你能自己去寻找这个答案。  我是你爷爷奶奶最小的孩子， 从小到大其实爷爷奶奶对我一直都没有什么期待，爷爷主要都是在忙工作，而奶奶会在小学追着你姑姑来辅导我的功课， 但在这之后就完全就靠我自己自觉了。虽然家里叔叔伯伯姑姑都很优秀一直都是亲戚里口中值得学习的榜样， 但自始至终其实家里人从来没有希望我一定要多么优秀，或者要在同龄人里做佼佼者。 你奶奶是一个很典型的农村妇女，但是又有着很多朴素实用的教育理念， 比如觉得孩子只要养好习惯，什么时间该做什么事就做什么， 剩下都水到渠成，因此邻居家的孩子上多少补习课她也根本不关心。虽然某种程度来说这忽略了环境和个体因素， 但不管怎么说，爸爸从小到大其实都没有想过自己一定要做同龄人最优秀的，似乎都是某个时刻突然觉得好像排倒数有点丢脸才开始好好读书。 可正是这份低期待， 反倒让我在踏入社会之后轻松了一些：当同龄人很多都在努力尝试在生活工作的每一个角落中寻找”不够优秀“ - 解决“不优秀” - 让自己更优秀的打怪过程，我反而在早早的一开始就接纳自己不是最聪明的事实，反过来在顺利和波折中一直在找寻自己人生的意义， 找寻自己希望成为一个怎样子的人的答案。这个世界很大， 大到每个人都是渺小的， 大到我们永远无法找到拥有同样人生轨迹的两个人，也大到绝大多数世俗认可很聪明的人都会最终意识到自己也不过是芸芸众生， 所以我希望你能学会接纳自己， 接纳世间那些不美好和自己可能会经历的不美好。  爸爸之前认识一个朋友，他的父母是人人艳羡的高知，为了他的学习举家搬到美国就为了陪读，而他也不负众望，从小都是一路成绩优秀，别人口中的好学生，最终进了MIT， 毕业后也找到人人艳羡的高薪工作。可就是如此优秀的人，却从来不知道如何爱别人，不知道如何处理别人对他说不，做所有事情的初衷只是证明自己选择的路能让自己一直都处于同龄人里金字塔的尖端。拥有再多世俗意义的成功， 将来有一天发现身边连爱自己的人都没有， 这样的人生又有什么意义呢。 而反过来爸爸前几天在看到中国一个渐冻症患者（蔡磊，原京东副总裁）的妻子在接受采访时被问到是否曾想过离开蔡磊，重启自己的人生的时候这么回答道： "人一辈子，其实我不认为是在换一个性价比。人一辈子，我轻轻松松一天，好像赚到了，其实没有的。人真正要算的账，是用自己的寿命换了什么，有没有做到任何一件有意义的事。" 是啊，可能对于很多人来说甚至包括我，觉得选择跟蔡磊一起对抗渐冻症是一件难度最大的事情，可人生要怎么算账从来不是别人告诉我们的。我不希望你像这样一直需要去满足世俗给予你的期待，相反我希望你顺其自然，在人生的长跑中花更多时间去思考你想成为一个怎样子的人，思考自己究竟喜欢什么，找到属于你自己的答案。有句出自《荀子·非十二子》的古话爸爸很喜欢， 不诱于誉， 不恐于诽，率道而行， 端然正己，  大概就是这个意思。   所谓的道， 也并非有一个普世答案，每个人的道都不一样，适合别人的道不一定适合你，需要你自己去寻找，另外一方面，我们在寻找的过程中应该始终聆听自己内心的声音，而不是别人告诉你应该怎么样你就应该怎么样：我不希望在你成长的过程中， 这些别人（包括来自于我或者你妈妈）对你的期待，或者对你的大谈特谈，成为你的桎梏甚至是镣铐。我和你妈妈可能会在大的方向上给你一些建议，但是我们希望你的人生也是完整的，人生就像一阵阵海浪，有波峰有波谷， 这些都是需要你自己体验的。</p>
+    <p>此时此刻我正坐在从旧金山飞往纽约的航班上，下周会飞去伦敦去参加一个好朋友的婚礼。 有些时候看自己身边好朋友已经settle down很开心，也挺羡慕的， 但是回头想想如果自己这几年早早就settle down的话人生可能就按部就班的进入每个车站，虽然现在似乎绕了一大圈，可正是这样的绕路才让我有机会将来跟你说“你爸爸当年可是摔这么惨还能站起来”， 跟你说”你爸爸当年可是对人类文明边界拓宽这一个mission有过一丢丢贡献的“，所以人生这盒巧克力，其实结果只是美好的一部分，而在知道有很多未曾尝试的味道的前提下打开一颗颗巧克力，也是构成这个美好的另外重要部分呢。</p>
+    <p>爱你的爸爸，</p>
+    <p>August 30， 2026</p>
+    <p>即将飞过田纳西上空的航班上</p>
+  </section>
+  <nav class="pn"><span class="spacer">←</span><a class="mid" href="letters.html">全部信件</a><span class="spacer">→</span></nav>
+  <footer>
+    <p class="credit">这个网站除了文章正文，文案和代码都是 Fable 5 写的。</p>
+    <p>© 2023– Hedera&#160;·&#160;<a href="../disclaimer.html">Legal Disclaimer</a>&#160;·&#160;Made in the Bay Area <span class="hedera" title="hedera (n.): the oldest ornament in typography. Also, me.">&#10087;</span></p>
+  </footer>
+</main>
+<script>
+  (function(){var root=document.documentElement,btn=document.getElementById('lamp');
+   function cur(){var a=root.getAttribute('data-theme');return a?a:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+   btn.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);
+     try{localStorage.setItem('lamp',n);}catch(e){}btn.textContent=n==='dark'?'开灯 / lamp':'关灯 / lamp';});
+   if(cur()==='dark')btn.textContent='开灯 / lamp';})();
+  console.log('%c❧ 看 source？宜。本站手写，欢迎来拆。忌：找 webfont，没有。','color:#2E5339;font-family:Courier,monospace');
+</script>
+</body>
+</html>
