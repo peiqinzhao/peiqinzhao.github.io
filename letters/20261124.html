@@ -1,0 +1,156 @@
+<!-- 手写的。发现 bug 请当作手工制品的证明。 -->
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>山雨欲来风满楼</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='25' font-size='24' fill='%232E5339'>&#10087;</text></svg>">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XB7ZB6KSK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5XB7ZB6KSK');
+</script>
+<script>(function(){try{var t=localStorage.getItem('lamp');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style>
+  :root{
+    --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A;
+    --serif:"Times New Roman","Songti SC","Noto Serif SC",serif;
+    --mono:"Courier New",Courier,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+      --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+      --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
+  }
+  :root[data-theme="light"]{ --ground:#FCFBF7; --ink:#1E1C1A; --ink-soft:#6b6459;
+    --accent:#2E5339; --link:#1F1FB8; --visited:#551A8B;
+    --hairline:#D8D4CA; --sel-bg:#DCE8DE; --sel-fg:#1E1C1A; }
+  :root[data-theme="dark"]{ --ground:#161512; --ink:#E6E1D6; --ink-soft:#9a9184;
+    --accent:#8FBF9C; --link:#8F8FE8; --visited:#A98FD6;
+    --hairline:#35322B; --sel-bg:#2E5339; --sel-fg:#E6E1D6; }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{ margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--serif); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; }
+  ::selection{background:var(--sel-bg);color:var(--sel-fg)}
+  main{max-width:46rem; margin:0 auto; padding:0 22px 0}
+  a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:2px}
+  a:visited{color:var(--visited)}
+  a:hover{text-decoration-thickness:2px}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .hedera{color:var(--accent); font-style:normal}
+  hr{border:0;border-top:1px solid var(--hairline);margin:0}
+
+  header{padding:26px 0 0}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:16px}
+  .home{font-family:var(--serif);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    font-size:clamp(15px,3.4vw,18px);text-decoration:none;color:var(--ink)}
+  .home:visited{color:var(--ink)}
+  .home:hover{text-decoration:underline}
+  .lamp{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;background:none;border:0;
+    color:var(--link);cursor:pointer;text-decoration:underline;text-underline-offset:2px;padding:2px 0;white-space:nowrap}
+  .lamp:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-soft);margin:22px 0 8px}
+  .eyebrow b{color:var(--accent);font-weight:400}
+  h1.title{font-family:var(--serif);font-weight:700;font-size:clamp(21px,4.6vw,27px);
+    letter-spacing:.01em;line-height:1.25;margin:0 0 22px}
+
+  pre.body{
+    font-family:var(--mono); font-variant-numeric:tabular-nums;
+    font-size:clamp(12.5px,2.65vw,14.5px); line-height:1.62;
+    white-space:pre-wrap; overflow-wrap:normal; word-break:keep-all;
+    color:var(--ink); margin:8px 0 0; tab-size:8;
+  }
+  pre.body b{font-weight:700}
+  pre.body a{color:var(--link)}
+
+  .prose{font-size:17px;line-height:1.85}
+  .prose p{margin:0 0 18px}
+  .prose p:first-child{margin-top:8px}
+  .prose blockquote{margin:22px 0;padding:6px 0 6px 18px;border-left:2px solid var(--accent);color:var(--ink)}
+
+  nav.pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:12.5px;border-top:1px solid var(--hairline);
+    margin-top:34px;padding:16px 0}
+  nav.pn a{white-space:nowrap}
+  nav.pn .mid{color:var(--ink-soft)}
+  nav.pn .spacer{color:var(--ink-soft);opacity:.5}
+
+  /* letters index */
+  .tw{overflow-x:auto}
+  table.letters{border-collapse:collapse;width:100%;margin:6px 0 0}
+  table.letters caption{text-align:left;color:var(--ink-soft);font-size:14px;margin-bottom:14px;line-height:1.6}
+  table.letters td{padding:12px 10px 12px 0;border-top:1px solid var(--hairline);vertical-align:top}
+  table.letters tr:last-child td{border-bottom:1px solid var(--hairline)}
+  table.letters .yr{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-soft)}
+  table.letters .ti a{font-family:var(--mono);font-size:14px}
+  table.letters .su{color:var(--ink-soft);font-size:14.5px;line-height:1.6}
+  .fn{color:var(--ink-soft);font-size:13px;font-family:var(--mono);margin:14px 0 0;line-height:1.7}
+
+  footer{border-top:1px solid var(--hairline);margin-top:8px;padding:22px 0 40px}
+  footer p{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);line-height:1.9;margin:0}
+  footer .credit{color:var(--ink);font-size:12.5px;margin:0 0 8px}
+  footer a{color:var(--ink-soft)}
+  .printonly{display:none}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important}}
+  @media print{
+    :root{--ground:#fff;--ink:#000;--ink-soft:#333;--hairline:#bbb}
+    .lamp,nav.pn{display:none}
+    .printonly{display:block;font-family:var(--mono);font-size:11px;color:#555;margin:0 0 14px}
+    a{color:#000}
+    pre.body a[href]::after{content:" ("attr(href)")";font-size:10px;color:#555}
+    body{font-size:12pt}
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="printonly">你好，纸上的读者。这封信终于回到了它该在的介质。</p>
+  <header>
+    <div class="top">
+      <a class="home" href="../index.html">Hedera Thoughts <span class="hedera" title="hedera (n.): the oldest ornament in typography. Also, me.">&#10087;</span></a>
+      <button class="lamp" id="lamp" type="button" aria-label="切换明暗">关灯 / lamp</button>
+    </div>
+    <hr>
+    <p class="eyebrow">随笔 · <b>ESSAY</b></p>
+    <h1 class="title">山雨欲来风满楼<br><span style="font-family:var(--mono);font-size:.6em;font-weight:400;letter-spacing:.04em;color:var(--ink-soft)">November 24, 2026</span></h1>
+  </header>
+  <section class="prose">
+    <p>总算抽出时间能停下来思考些东西，这段时间因为AI给自己的冲击实在是太大了。此时此刻我正听着AI孙燕姿的《一场游戏一场梦》，毫无逻辑毫无思绪地写下这篇心流日志。</p>
+    <p>一年前的今天世界还处于Opus 4.5的水平，LLM已经能从基本的代码补全进步到基于整个代码库的理解来做中小型规模的项目了，那个时候我的想象力还仅仅停留在写写自己从未染指的小程序之类，工具调用，视频制作还处于AI尚未能够完全解决的领域。直到今年夏天Fable 5的出现，开始让我意识到程序员这一行已经是结束了，或者是写程序这件事已经完全结束了。那时候我还觉得AI还仅仅只能在代码这个structured data的舒适区里为所欲为，圈子之外的特定领域（财务，法律，游戏，一切需要专业技能的行业）靠着私有数据（context）的封闭性以及AI那粗糙的工具调用能力，还没法做到对人的替代。尤其是艺术，我清楚地记得2025年的冬天我仍固执地认为，就算所有都能被AI来写，音乐，绘画这些AI始终无法创造出人类独有的美感。那个时候我还觉得人类尚有其自身的价值所在，一个数据中心里的神明还暂时只能像罗宾汉和蝙蝠侠那样，给人类打打辅助。而那个时候也确实如此，AI短视频只能是十几秒勉强算为连贯的制作，音乐也是正常人仔细听听都能听出来的塑料感，所谓的text to image也只能生成出一眼假的图片，就算指定让AI改动某块东西，对方也像是听不懂话的三年级小学生，纵是有神奇画笔，也无法做出我想要的效果。</p>
+    <p>但Fable 5.2的模型出现打破了我所有的幻想，大模型的研发在迈入RSI之后明显进入雪崩状态，每次新模型的出现都是能力锯齿形状的提高，这种提高不仅仅是原有领域能力的提升，同样伴随的是新的领域出现的能力提升，比如Opus 5.5在视频领域的异军突起，甚至这可能连ant自身都未曾料到。这不禁让我抬头往未来看，如果模型再继续这样提升，是不是就意味着人类大部分的脑力活动其实终有一天都会被替代呢。如果大模型能解决人类167年都未能证明的黎曼猜想，任何一个谦卑的人都没有任何底气说自己现在做的东西不会被AI替代掉。如果真的是这样，2027年就将是人类历史上一个巨大的转折点，向左走是人类的边界将大大拓宽，我们不再拘束于传统的生产力关系，每个人都能拥有一支巨大的团队，每个人都有一个拥有整个世界知识压缩结果的老师。向右走是人类大面积失业，每个人都会痛苦焦虑自己辛辛苦苦读书六七年，为什么刚毕业就失业。或者为什么辛辛苦苦积攒的六七年工作经验，似乎在AI面前也如同秋叶一样轻轻一吹就落了。</p>
+    <p>更为让我觉得恐惧？焦虑的地方在于，AI对人类的冲击也并不是循序渐进的，而是如同AI自身能力的发展。我还记得之前在ins关注一个做艺术陶艺的博主，她发了一条story就是说她身边的人90%其实现在日常用AI都比较少。那个时候我就突然意识到其实至少当前AI的受众还只是集中在程序员，圈子以外的人其实还停留在“啊这个AI怎么问个问题这么多废话”，“啊为什么问一个这么简单的问题AI一本正经的胡说八道”这些很基础的抱怨上。而正是这种bias，反倒容易让人们以为最前沿的AI模型也不过如此。其实现在AI就像一个锁在笼子的精灵，这个笼子要么就是oai或者ant，在一个AI native的组织里，AI能够发挥出它最大的能力输出，没有瓶颈，没有context blind spot。而在外面的事情，它却只能努力够手去完成人类要其完成的任务，而这种恶性循环却是：人类认为其能力不过如此，因此给其很基础的任务。</p>
+    <p>可是在未来的半年内，人类就会意识到AI就是比单独的个人要聪明，你不需要跟我说什么taste，什么context，什么从production环境下摸爬滚打之后的经验，这些全是老登世界可以被蒸馏内化的东西，最后剩下的只有一个AI没法复制，那就是想象力。think big。我对未来的判断就是，被已有知识体系甚至是旧的生产力关系束缚的老登，都会意识到被淘汰，而那些富有想象力，而敢于给AI定义问题是什么的人，反倒能将AI的能力发挥到极致。可能很多人会说什么，“啊你用AI写出来这些slop，写出来能用，谁来维护呢？还得是人来维护。”我并不这么认为，所有的执行层面，无论是写代码还是修图，这些通通都是能用token来实现，哪怕写出来的版本不好，随着AI能力的迭代，这些都能随时从头写一套新的版本，而维护这些更是AI随随便便就能替代普通SRE的活。未来只要有人说，“你看AI不行，这点做得不行”，或者说有一个startup说，现在AI这方面的能力做得不好，我们可以有机会。这些在过去一年里都是不断地被打脸。可能还有人说，啊你看你说得似乎token不要钱一样，现在token用下来比人贵多了。但问题是AI的上限比人的上限要高太多了，你如果花一万刀能做十万刀的事情，你会在意一千刀的成本比一万刀少吗。更何况在传统组织架构里，不同人之间的沟通摩擦本身就是一种成本。</p>
+    <p>我是很认可一种说法就是，FDE不是解决AI落地企业的方法，原因就在于在过去一年内美国这么多企业，投入这么大的AI支出，但是营收或者效率都没有提高，本质原因就在于，就像一根水管一样，你派一个AI去解决某一个joint的bottleneck是没有意义的，因为整体公司的运营效率是在于整根水管，后面的水/信息流得慢了，前面流得再快也无济于事。所以我觉得金融行业里量化将会是第一个AI提高整体效率的最佳例子。但对于很多现有企业来说，老实来说我认为AI + 旧的生产力关系并不是一个最佳的路线，甚至反倒是如果每个人都配备所谓AI，会更加拉慢整体的运行效率，因为不同人之间的context会互相隔离，然后由人类选择出来的AI response又会让彼此的context污染（因为已经是经过压缩过的context）。因此我认为对于很多公司，尤其是SaaS来说，一定会是新的公司基于新的生产力关系（比如一个或者几个人配备几千个agent）实现更高的运营效率，来打破已有公司所谓的护城河。当然你要说有些公司的护城河是分发，可能这确实会是一种优势。我觉得最大优势还是商业模式和私有数据，比如说Costco或者Walmart，这些我觉得AI赋能的新公司也很难去颠覆。</p>
+    <p>哦突然想到说，我认为定制化一定是未来，比如说游戏。以前的商业模式是每个游戏工作室，比如说腾讯，养一大帮人，前期投入一定的资本，让这群团队寻找出他们觉得最适合年轻群体的路线，做出一个或者若干的游戏，然后相应的火了一个之后就是不断的现金流收入。同时他又掌握了流量和心智入口，每个人打开微信的时候都能看到其推出的产品或者服务。可是我觉得这不会是未来，我也在思考游戏的本质是什么，是刺激多巴胺？是玩家作为亲临者去经历游戏设计师写出的一个故事？是朋友之间空档之时作为群居动物人类之间的一种情感交流的载体？但想象一下，无论是什么，本质上消费者还是一个被动接受的角色，我能玩什么跟我想玩什么之间永远是有一道鸿沟的。但是假如有一天，我能玩我想玩的，比如说一群朋友hangout，吃饭前先花半个小时讨论想玩什么，FPS etc.，然后把idea丢给Opus，一起去吃个饭，然后吃完饭回来就能一起玩了，甚至边玩边iterate。当然商业公司可以提供一个平台，底层是基础的模块，比如游戏底层引擎，比如多人游戏如何网络通信等等，这些基本的infra，完全可以有一个平台来实现，而具体的游戏实现，是由玩家而非作者去设计。当然你会说，啊这样多累，我打游戏就是想休息一下我的大脑，但是如果平台有你的所有私有数据呢，知道你是哪个行业，知道你过去半年的邮件短信，知道你整个人的画像，来推断出你究竟是喜欢怎么样的游戏。这就有点像九头蛇里的洞察计划了哈哈。</p>
+    <p>另一方面，隐私和便利性在过去永远都是跷跷板的两端，用户想要更好的搜索结果，或者更好的广告推荐，就需要将自己的隐私数据分享给诸如Meta或者Google的平台，而后者正是基于这些海量数据来建立护城河。而将来如果你所有的数据都可以被AI来分析来洞察，你的数据仅仅存放在一个沙盒里，是不是就意味着这两者就不再冲突了。</p>
+    <p>to C端我觉得最重要的还是寻找满足用户情绪价值的东西，而不是寻找让人变聪明的办法。就好比personal agent，我一直有的观点就是，99%的人都是不需要节省时间的，但是99%的人都是需要情绪价值的（陪伴，催产素，多巴胺，肾上腺素etc.）。</p>
+    <p>再者是教育，我至今都不知道怎么回答我家人问我他们的孩子现在应该学什么怎么学的问题，我想现在也没有人会有一个合理的答案（因为教育工作者是没法获取到最前沿的模型）。就好比之前在微博里看到一个博主说，他的孩子很兴奋地跟他说，他用AI写出来一首很美的诗，博主不知道应该是鼓励孩子，还是跟孩子说这诗并不是你写的，而是AI写的，你只是从中提了几轮修改意见而已。我们究竟该如何将这个如此powerful的工具？交给我们的孩子呢，我们又是否需要担心他们用得太多会导致思维能力的下降呢？</p>
+    <p>回到开头的话题，有点写累了，我主要想表达的观点很简单，就是山雨欲来风满楼，人类将经历历史上最激进的科技革命变革，或许有泡沫，但是这个变革确实是实实在在，对于个体的风险远远大于对人类族群自身的受益，尚不谈未来社会的组织架构是如何的，也不说所谓的数据中心会提高生活成本或者扰民，单单就失业这点才最有可能引发社会动荡，每个人都不应该把头埋在沙子里当鸵鸟，至少我们需要抛弃旧的观念，比如“我不可能写出一个生产级别的query engine”，而是退一步去思考更大的问题，比如“究竟需要query engine吗？”甚至是“我能不能造出一个不需要query engine的东西”，甚至是忘记什么是query engine，就从第一性原理出发，为了这个需求，我们需要造什么。</p>
+    <p>最后的最后，我只想说，无论世界怎么发展，战争还是和平，左还是右，保守还是进步，对于个体来说，健康与爱真的永远都是物质与金钱无法衡量的东西。</p>
+  </section>
+  <nav class="pn"><span class="spacer">←</span><a class="mid" href="letters.html">全部信件</a><span class="spacer">→</span></nav>
+  <footer>
+    <p class="credit">这个网站除了文章正文，文案和代码都是 Fable 5 写的。</p>
+    <p>© 2023– Hedera&#160;·&#160;<a href="../disclaimer.html">Legal Disclaimer</a>&#160;·&#160;Made in the Bay Area <span class="hedera" title="hedera (n.): the oldest ornament in typography. Also, me.">&#10087;</span></p>
+  </footer>
+</main>
+<script>
+  (function(){var root=document.documentElement,btn=document.getElementById('lamp');
+   function cur(){var a=root.getAttribute('data-theme');return a?a:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+   btn.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);
+     try{localStorage.setItem('lamp',n);}catch(e){}btn.textContent=n==='dark'?'开灯 / lamp':'关灯 / lamp';});
+   if(cur()==='dark')btn.textContent='开灯 / lamp';})();
+  console.log('%c❧ 看 source？宜。本站手写，欢迎来拆。忌：找 webfont，没有。','color:#2E5339;font-family:Courier,monospace');
+</script>
+</body>
+</html>
